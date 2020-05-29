@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" http-equiv="refresh" content="10">
+    <title>Forms</title>
+</head>
+<body>
+<!--表单学习-->
+<form action="">
+    <!--文本域-->
+    Username: <input type="text" name="user"><br>
+    Password: <input type="password" name="password"><br>
+    <hr>
+    <!--单选按钮-->
+    <input type="radio" name="sex" value="male">Male<br>
+    <input type="radio" name="sex" value="female">Female<br>
+    <hr>
+    <!--复选框-->
+    <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+    <input type="checkbox" name="vehicle" value="Car">I have a car<br>
+    <hr>
+    <!--下拉列表-->
+    <select name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <!--预选项-->
+        <option value="fial" selected>Fiat</option>
+        <option value="audi">Audi</option>
+    </select><br>
+    <hr>
+    <!--按钮-->
+    <input type="button" value="baby tuan!">
+</form>
+
+<!--提交按钮-->
+<form name="input" action="html_form_action.php" method="get">
+    Username: <input type="text" name="User">
+    <input type="submit" value="Submit">
+</form>
+
+<!--带边框的表单-->
+<form action="">
+    <fieldset>
+        <legend>Personal information</legend>
+        Name: <input type="text" size="30"><br>
+        E-mail: <input type="text" size="30"><br>
+        Date of birth: <input type="text" size="10">
+    </fieldset>
+</form>
+
+<p><b>注意:</b>密码字段中的字符是隐藏的（显示为星好或圆圈）</p>
+</body>
+</html>
