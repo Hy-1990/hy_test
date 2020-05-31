@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Script</title>
+</head>
+<body>
+<p id="demo">点击可以触发内容！</p>
+
+<!--脚本语言-->
+<script>
+    document.write("hello trump")
+    document.write("<p>这事一个段落</p>")
+
+    function myfunction() {
+        document.getElementById("demo").innerHTML = "hello javascript!";
+    }
+
+    function myfunction1() {
+        x = document.getElementById("demo")
+        x.style.color = "#00ffa6";
+    }
+</script>
+
+<button type="button" onclick="myfunction()">点我</button>
+<button type="button" onclick="myfunction1()">点我改颜色</button>
+
+</body>
+</html>
