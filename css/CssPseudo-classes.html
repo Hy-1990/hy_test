@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-classes伪类</title>
+    <style>
+
+        /*匹配所有< p > 元素下的第一个< i > 元素*/
+        p > i:first-child {
+            color: blue;
+        }
+
+        /*匹配所有作为第一个子元素<p>下所有的<i>元素*/
+        p:first-child i {
+            color: #44CCAA;
+        }
+
+        /*：lang类为属性为no的q元素定义引号的类型*/
+        q:lang(no) {
+            quotes: "~" "~";
+        }
+
+    </style>
+</head>
+<body>
+<p>I am a <i>strong</i> man. I am a <i>strong</i> man.</p>
+<p>I am a <i>strong</i> man. I am a <i>strong</i> man.</p>
+
+
+<p>Some text<q lang="no">Trump is a sb</q>Some text</p>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drag、Drop</title>
+    <style type="text/css">
+        #div1, #div2 {
+            float: left;
+            width: 500px;
+            height: 200px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+    <script>
+        // 默认无法将数据/元素放置到其他元素中。如果需要设置允许放置，我们必须组织对元素的默认处理方式。
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        // ondragstart属性调用了一个函数，drag(event)，它规定了被拖动的数据
+        function drag(ev) {
+            ev.dataTransfer.setData("Text", ev.target.id);
+        }
+
+        // 当放置被拖数据时，会发生drop事件
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data))
+        }
+    </script>
+</head>
+
+<body>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <!--为了使元素可拖动，把draggable属性设置为true-->
+    <img src="images/1.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="300" height="171">
+</div>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>
