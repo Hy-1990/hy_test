@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Func函数</title>
+</head>
+<body>
+<p>带返回值的函数</p>
+<p id="demo"></p>
+<script>
+    function myfunction(a, b) {
+        return a * b;
+    }
+
+    document.getElementById("demo").innerHTML = myfunction(100, 199)
+</script>
+
+<!--判断语句-->
+<p>判断时间是否为早上，作出不同反应</p>
+<button onclick="myfunction1()">点击这里</button>
+<p id="demo1"></p><br>
+
+
+<p>switch判断是否为周末</p>
+<button onclick="myfunction2()">点我</button>
+<p id="demo2"></p>
+<script>
+    function myfunction1() {
+        var x = "";
+        var time = new Date().getHours();
+        if (time > 12) {
+            x = "good afternoon";
+        } else {
+            x = "good morning";
+        }
+        document.getElementById("demo1").innerHTML = x;
+    }
+
+    function myfunction2() {
+        var x = "";
+        var day = new Date().getDay();
+        switch (day) {
+            case 6:
+                x = "今天星期六！";
+                break;
+            case 0:
+                x = "今天星期天！";
+                break
+            default:
+                x = "快点周末！";
+        }
+        document.getElementById("demo2").innerHTML = x;
+    }
+</script>
+</body>
+</html>

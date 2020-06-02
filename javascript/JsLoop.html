@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop循环</title>
+</head>
+<body>
+<p>for循环</p>
+<button onclick="myfunction()">点我</button>
+<p id="demo"></p>
+
+
+<p>in循环</p>
+<button onclick="myfunction1()">点我1</button>
+<p id="demo1"></p>
+<script>
+    function myfunction() {
+        var x = "";
+        for (var i = 0; i < 5; i++) {
+            x = x + "数字:" + i + "<br>";
+        }
+        document.getElementById("demo").innerHTML = x;
+    }
+
+    function myfunction1() {
+        var person = {
+            name: "hahha",
+            age: 100
+        };
+        var txt = "";
+        for (x in person) {
+            txt = txt + person[x] + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = txt;
+    }
+
+</script>
+</body>
+</html>

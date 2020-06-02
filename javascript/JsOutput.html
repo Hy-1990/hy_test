@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Output-javascript输出</title>
+</head>
+<body>
+<!--JavaScript 可以通过不同的方式来输出数据：-->
+<!--使用 window.alert() 弹出警告框。-->
+<!--使用 document.write() 方法将内容写到 HTML 文档中。-->
+<!--使用 innerHTML 写入到 HTML 元素。-->
+<!--使用 console.log() 写入到浏览器的控制台。-->
+<h1>第一种输出方式</h1>
+<script>
+    window.alert("Trump is SB")
+</script>
+
+<h1>第二种输出方式</h1>
+<p id="demo1">第一个段落</p>
+<script>
+    document.getElementById("demo1").innerHTML = "段落已修改！"
+</script>
+
+<h1>第三种输出方式</h1>
+<button onclick="myfunction()">点我</button>
+<script>
+    function myfunction() {
+        document.write(Date())
+    }
+</script>
+
+<h1>第四种输出方式</h1>
+<script>
+    a = 5;
+    b = 3;
+    c = a + b;
+    console.log(c)
+</script>
+
+</body>
+</html>
