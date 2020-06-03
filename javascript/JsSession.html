@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件触发</title>
+    <script>
+        function myOver(obj) {
+            obj.src = "../images/11.jpg";
+        }
+
+        function myOut(obj) {
+            obj.src = "../images/10.jpg";
+        }
+    </script>
+</head>
+<body>
+<img src="../images/10.jpg" alt="雪中10" onmouseover="myOver(this)" onmouseout="myOut(this)" width="300" height="171">
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Func2</title>
+</head>
+<body>
+<p>myObject.fullName() 返回 John Doe:</p>
+<p id="demo"></p>
+<script>
+    var myObject = {
+        name: "trump",
+        age: 100,
+        fullName: function () {
+            return this.name + "," + this.age;
+        }
+    }
+    document.getElementById("demo").innerHTML = myObject.fullName();
+</script>
+</body>
+</html>

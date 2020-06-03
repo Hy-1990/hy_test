@@ -7,10 +7,23 @@
 <body>
 <p>创建JavaScript对象</p>
 <p id="demo"></p>
+
 <script>
     // javascript的自定义实体类，类似python的namedtuple
     var person = {name: "Trump", age: 83, eyeColor: "blue"};
     document.getElementById("demo").innerHTML = person.name + "现在" + person.age + "岁";
+
+    function person1(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    trump = new person1("haha", 100);
+    document.write(trump.name + " " + trump.age);
+
+    // 所有的 JavaScript 对象都会从一个 prototype（原型对象）中继承属性和方法。
+    person1.prototype.animal = "cat";
+    document.write(trump.animal);
 </script>
 </body>
 </html>

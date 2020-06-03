@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer定时器</title>
+</head>
+<body>
+<p>在页面显示一个时钟</p>
+<p id="demo"></p>
+
+<button onclick="myfunction1()">停止</button>
+<script>
+    var time1 = setInterval(function () {
+        myfunction()
+    }, 1000);
+
+    function myfunction() {
+        var d = new Date();
+        // var t = d.toLocaleTimeString();
+        var t = d.toTimeString()
+        document.getElementById("demo").innerHTML = t;
+    }
+
+    function myfunction1() {
+        clearInterval(time1);
+    }
+</script>
+
+</body>
+</html>

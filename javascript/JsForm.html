@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form表单操作函数</title>
+    <script>
+        function myfunction() {
+            var x = document.forms["myForm"]["email"].value;
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                alert("不是一个有效的email地址")
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<!--邮箱提交-->
+<form name="myForm" action="demo-form.php" onsubmit="return myfunction();" method="post">
+    Email:<input type="text" name="email">
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
